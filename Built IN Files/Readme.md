@@ -1,1 +1,1 @@
-<h1 align="center">"Contains Some Built In Funnctions Froom QT"</h1>
+<h1 align="center">"Contains Some Built In Functions From QT"</h1>
