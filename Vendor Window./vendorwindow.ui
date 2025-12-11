@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>vendorwindow</class>
+ <widget class="QMainWindow" name="vendorwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CEG SQUARE - Vendor Portal</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="headerLabel">
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #2E7D32; padding: 10px; background-color: #E8F5E8; border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Vendor Dashboard</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="shopTab">
+       <attribute name="title">
+        <string>My Shop</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="shopGroupBox">
+          <property name="title">
+           <string>Shop Registration</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="shopNameLabel">
+             <property name="text">
+              <string>Shop Name:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="shopNameEdit">
+             <property name="placeholderText">
+              <string>Enter your shop name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="slotLabel">
+             <property name="text">
+              <string>Slot Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="slotEdit">
+             <property name="placeholderText">
+              <string>e.g., A1, B2, C3</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="descriptionLabel">
+             <property name="text">
+              <string>Description:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QTextEdit" name="descriptionEdit">
+             <property name="placeholderText">
+              <string>Brief description of your shop...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registerShopButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: #4CAF50; color: white; font-weight: bold; padding: 10px; font-size: 14px;</string>
+          </property>
+          <property name="text">
+           <string>Register Shop</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="shopStatusLabel">
+          <property name="styleSheet">
+           <string notr="true">color: #f44336; font-weight: bold; padding: 10px;</string>
+          </property>
+          <property name="text">
+           <string>No shop registered</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="productsTab">
+       <attribute name="title">
+        <string>Products</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="addProductGroupBox">
+          <property name="title">
+           <string>Add New Product</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="productNameEdit">
+             <property name="placeholderText">
+              <string>Product Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="priceEdit">
+             <property name="placeholderText">
+              <string>Price (₹)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="categoryEdit">
+             <property name="placeholderText">
+              <string>Category</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="addProductButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: #2196F3; color: white; padding: 8px;</string>
+             </property>
+             <property name="text">
+              <string>Add Product</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="productsTable">
+          <property name="columnCount">
+           <number>5</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Product Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Price (₹)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Category</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Actions</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="ordersTab">
+       <attribute name="title">
+        <string>Orders</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="statsLayout">
+          <item>
+           <widget class="QLabel" name="pendingOrdersLabel">
+            <property name="styleSheet">
+             <string notr="true">background-color: #FFF3CD; color: #856404; padding: 8px; border-radius: 4px; font-weight: bold;</string>
+            </property>
+            <property name="text">
+             <string>Pending: 0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="preparingOrdersLabel">
+            <property name="styleSheet">
+             <string notr="true">background-color: #CCE5FF; color: #004085; padding: 8px; border-radius: 4px; font-weight: bold;</string>
+            </property>
+            <property name="text">
+             <string>Preparing: 0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="readyOrdersLabel">
+            <property name="styleSheet">
+             <string notr="true">background-color: #D4EDDA; color: #155724; padding: 8px; border-radius: 4px; font-weight: bold;</string>
+            </property>
+            <property name="text">
+             <string>Ready: 0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="ordersTable">
+          <property name="columnCount">
+           <number>7</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Order ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Customer</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Items</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Total (₹)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Order Time</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Actions</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="financeTab">
+       <attribute name="title">
+        <string>Finance</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QGroupBox" name="overviewGroupBox">
+          <property name="title">
+           <string>Financial Overview</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="totalRevenueLabel">
+             <property name="styleSheet">
+              <string notr="true">font-size: 14px; font-weight: bold; color: #2E7D32;</string>
+             </property>
+             <property name="text">
+              <string>Total Revenue: ₹0.00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="todayRevenueLabel">
+             <property name="styleSheet">
+              <string notr="true">font-size: 14px; font-weight: bold; color: #1976D2;</string>
+             </property>
+             <property name="text">
+              <string>Today's Revenue: ₹0.00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="totalOrdersLabel">
+             <property name="text">
+              <string>Total Orders: 0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="completedOrdersLabel">
+             <property name="text">
+              <string>Completed Orders: 0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="paymentHistoryLabel">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Payment History</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="paymentHistoryTable">
+          <property name="columnCount">
+           <number>4</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Date</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Order ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Amount (₹)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="logoutButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: #757575; color: white; padding: 8px; margin: 10px; font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
