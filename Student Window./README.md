@@ -1,6 +1,6 @@
 <h1 align="center">"Displays About Student Login"</h1>
 
-**Contains A **
+It Contains
 
 ->C file (Source Code)
 
