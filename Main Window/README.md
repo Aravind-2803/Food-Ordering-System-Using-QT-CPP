@@ -1,4 +1,4 @@
-<h1 align="center">"Displays About First Login Window"</h1>
+<h1 align="center">"Displays About Login Window"</h1>
 
 It Contains
 
