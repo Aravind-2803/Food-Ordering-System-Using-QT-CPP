@@ -1,8 +1,9 @@
 <h1 align="center">"Displays About Student Login"</h1>
-#Contains A 
 
-#->C file (Source Code)
+**Contains A **
 
-#->UI File (used To display About The Login Window Interface)
+->C file (Source Code)
 
-#->An Header File Contains The Necessary Built In Fuctions
+->UI File (used To display About The Login Window Interface)
+
+->An Header File Contains The Necessary Built In Fuctions
